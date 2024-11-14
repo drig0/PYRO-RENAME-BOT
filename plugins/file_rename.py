@@ -77,7 +77,7 @@ async def rename_selection(client, message):
 async def rename_callback(bot, query): 
     user_id = query.from_user.id
     file_name = query.message.text.split(":-")[1]
-    file_path = f"downloads/{user_id}{time.time()}/{file_name}"
+    file_path = f"/tmp/{user_id}{time.time()}/{file_name}"
     file = query.message.reply_to_message
 
     sts = await query.message.edit("Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ....")    
